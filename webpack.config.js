@@ -47,7 +47,7 @@ module.exports = {
         }),
     ],
     resolve: {
-        extensions: ['.js', '.js'],
+        extensions: ['.js', '.ts'],
     },
     devServer: {
         static: path.join(__dirname, 'dist'),

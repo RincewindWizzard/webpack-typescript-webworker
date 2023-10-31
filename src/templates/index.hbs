@@ -4,10 +4,31 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1" name="viewport">
         <title>Example Webworker</title>
-        <script src="index.js" type="module"></script>
+        <script src="bundle.js" type="module"></script>
     </head>
     <body>
+        <section class="hero is-info">
+            <div class="hero-body">
+                <p class="title">
+                    Webworker Example
+                </p>
+                <p class="subtitle">
+                    Every run takes more time
+                </p>
+            </div>
+        </section>
 
+        <section class="section container">
+            <div id="results" class="section"></div>
+            <button id='nextBtn' class="button is-success">Next Row</button>
+        </section>
 
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Webworker Example</strong> by <a href="https://github.com/RincewindWizzard">RincewindWizzard</a>.
+                </p>
+            </div>
+        </footer>
     </body>
 </html>
