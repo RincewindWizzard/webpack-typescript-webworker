@@ -10,9 +10,12 @@ const mode = process.env.NODE_ENV || 'development';
 
 module.exports = {
     mode,
-    entry: './src/index.ts',
+    entry: {
+        main: './src/index.ts',
+        worker: './src/worker/worker.ts'
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
@@ -21,6 +24,10 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
+            },
+            {
+                test: /\.worker.ts$/,
+                use: {loader: 'worker-loader', options: {inline: true}},
             },
             {
                 test: /\.s[ca]ss$/,
